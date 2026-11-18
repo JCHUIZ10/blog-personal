@@ -14,6 +14,7 @@ const FALLBACK = {
     </a>
     <nav class="nav-links" aria-label="Principal">
       <a href="index.html" data-nav="inicio">inicio</a>
+      <a href="index.html#sobre-mi">sobre mí</a>
       <a href="proyectos.html" data-nav="proyectos">proyectos</a>
     </nav>
   </div>

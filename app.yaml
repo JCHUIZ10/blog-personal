@@ -1,28 +1,28 @@
-runtime: php72
-api_version: 1
+service: blog
+runtime: php82
 
 handlers:
-# Servir la página principal (index.html)
+# 1. Página principal (index.html)
 - url: /
   static_files: public/index.html
   upload: public/index.html
 
-# Servir la página de proyectos sin extensión
+# 2. Página de proyectos
 - url: /proyectos
   static_files: public/proyectos.html
   upload: public/proyectos.html
 
-# Servir imágenes y recursos multimedia
+# 3. Imágenes y recursos multimedia
 - url: /(.+\.(gif|png|jpg|jpeg|svg|ico|webp))$
   static_files: public/\1
-  upload: public/(.+\.(gif|png|jpg|jpeg|svg|ico|webp))$
+  upload: public/.+\.(gif|png|jpg|jpeg|svg|ico|webp)$
 
-# Servir estilos CSS y scripts JS
+# 4. Hojas de estilo y scripts JS
 - url: /(.+\.(css|js|json))$
   static_files: public/\1
-  upload: public/(.+\.(css|js|json))$
+  upload: public/.+\.(css|js|json)$
 
-# Servir cualquier otro archivo estático o componente dentro de public/
+# 5. Cualquier otro recurso o componente dentro de public/
 - url: /(.*)
   static_files: public/\1
-  upload: public/(.*)
+  upload: public/.*
