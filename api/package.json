@@ -1,9 +1,0 @@
-{
-  "name": "jchuiz-tech-blog",
-  "version": "1.0.0",
-  "description": "Bitácora de desarrollo, sistemas distribuidos y experimentación de hardware",
-  "main": "index.js",
-  "dependencies": {
-    "express": "^4.19.2"
-  }
-}

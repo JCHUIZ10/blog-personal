@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JCHUIZ://lab — Bitácora técnica</title>
+  <meta name="description" content="Bitácora de desarrollo, sistemas distribuidos y experimentación de hardware.">
+  <meta name="theme-color" content="#2E2F33">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23242529'/%3E%3Ctext x='5' y='22' font-family='monospace' font-size='16' font-weight='700' fill='%23F6C945'%3E%3E_%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/scene3d.js"></script>
+</head>
+<body data-page="inicio">
+
+  <div data-include="header"></div>
+
+  <main>
+    <!-- HERO -->
+    <section class="container hero">
+      <div>
+        <p class="hero-prompt">jchuiz@lab:~$ <span class="accent">whoami</span></p>
+        <h1>Bitácora de desarrollo, sistemas distribuidos y <span class="accent">experimentación de hardware</span>.</h1>
+        <p class="hero-lead">
+          Notas técnicas cortas pero precisas sobre computación, redes, infraestructura y bases de datos.
+          Un laboratorio abierto donde documento lo que construyo, rompo y aprendo.
+        </p>
+        <div class="hero-tags">
+          <span class="tag is-accent"><span class="dot"></span>prototipo v0.1</span>
+          <span class="tag">redes</span>
+          <span class="tag">bases de datos</span>
+          <span class="tag">linux</span>
+          <span class="tag">iot / esp32</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="proyectos.html">ver proyectos →</a>
+          <a class="btn btn-ghost" href="#bitacora">leer bitácora</a>
+        </div>
+      </div>
+
+      <div class="scene-wrap" id="scene3d" aria-hidden="true">
+        <div class="scene-fallback">[ nodo topológico ]</div>
+        <span class="scene-meta">node::icosa · mueve el cursor</span>
+      </div>
+    </section>
+
+    <!-- BITÁCORA RECIENTE -->
+    <section class="container section" id="bitacora">
+      <div class="section-head">
+        <div>
+          <div class="section-label">bitácora reciente</div>
+          <h2>Últimas entradas</h2>
+        </div>
+        <p>Primeros borradores del laboratorio. Los artículos completos se publicarán en próximas versiones.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <div class="card-meta">
+            <span class="tag">redes e infraestructura</span>
+            <span class="card-date">TIL #003</span>
+          </div>
+          <h3>Hardening básico de SSH en un servidor Linux</h3>
+          <p>Desactivar el acceso root, forzar autenticación por llave y limitar intentos con fail2ban: tres cambios que reducen drásticamente la superficie de ataque.</p>
+          <div class="card-foot"><span>~4 min de lectura</span><span class="accent">en redacción</span></div>
+        </article>
+
+        <article class="card">
+          <div class="card-meta">
+            <span class="tag">software y datos</span>
+            <span class="card-date">TIL #002</span>
+          </div>
+          <h3>Índices compuestos: el orden de las columnas importa</h3>
+          <p>Por qué un índice (a, b) acelera consultas filtradas por «a» pero no necesariamente por «b», y cómo verificarlo con EXPLAIN.</p>
+          <div class="card-foot"><span>~3 min de lectura</span><span class="accent">en redacción</span></div>
+        </article>
+
+        <article class="card">
+          <div class="card-meta">
+            <span class="tag">electrónica y ciencia</span>
+            <span class="card-date">TIL #001</span>
+          </div>
+          <h3>Telemetría con ESP32 y un sensor DHT22</h3>
+          <p>Lectura de temperatura y humedad, envío periódico por MQTT y los detalles de alimentación que nadie menciona en los tutoriales.</p>
+          <div class="card-foot"><span>~5 min de lectura</span><span class="accent">en redacción</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PILARES -->
+    <section class="container section">
+      <div class="section-head">
+        <div>
+          <div class="section-label">ejes de contenido</div>
+          <h2>Sobre qué escribo</h2>
+        </div>
+        <p>Cada nota se clasifica en uno de estos tres pilares para mantener una línea editorial clara.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card pillar">
+          <div class="pillar-index">01</div>
+          <h3>Ingeniería de Software y Datos</h3>
+          <ul>
+            <li>Arquitectura backend</li>
+            <li>Optimización de bases de datos</li>
+            <li>Contenedores (Docker)</li>
+            <li>Automatización</li>
+          </ul>
+        </div>
+        <div class="card pillar">
+          <div class="pillar-index">02</div>
+          <h3>Redes e Infraestructura</h3>
+          <ul>
+            <li>Administración Linux</li>
+            <li>Hardening SSH y firewalls</li>
+            <li>Monitoreo de servicios</li>
+            <li>Topologías de red</li>
+          </ul>
+        </div>
+        <div class="card pillar">
+          <div class="pillar-index">03</div>
+          <h3>Electrónica, Ciencia y Matemáticas</h3>
+          <ul>
+            <li>Microcontroladores ESP32 / Arduino</li>
+            <li>Telemetría de sensores</li>
+            <li>Modelado matemático</li>
+            <li>Simulaciones computacionales</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section class="container section">
+      <div class="section-head">
+        <div>
+          <div class="section-label">cómo está hecho</div>
+          <h2>Arquitectura del sitio</h2>
+        </div>
+        <p>Sin backend, sin compiladores: HTML, CSS y JavaScript puro servidos desde la CDN de Vercel.</p>
+      </div>
+
+      <div class="terminal">
+        <div class="terminal-bar"><span></span><span></span><span></span></div>
+<pre><span class="c"># estructura del repositorio</span>
+<span class="k">noticias/</span>
+├── vercel.json        <span class="c"># urls limpias</span>
+├── index.html         <span class="c"># hero 3D + bitácora</span>
+├── proyectos.html     <span class="c"># vitrina conectada a GitHub</span>
+├── componentes/       <span class="c"># header y footer reutilizables</span>
+├── css/styles.css     <span class="c"># sistema de diseño</span>
+└── js/                <span class="c"># main · scene3d · github</span></pre>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="footer"></div>
+
+</body>
+</html>

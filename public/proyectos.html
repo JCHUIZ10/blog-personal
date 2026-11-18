@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyectos — JCHUIZ://lab</title>
+  <meta name="description" content="Repositorios originales de JCHUIZ10 sincronizados desde la API pública de GitHub.">
+  <meta name="theme-color" content="#2E2F33">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23242529'/%3E%3Ctext x='5' y='22' font-family='monospace' font-size='16' font-weight='700' fill='%23F6C945'%3E%3E_%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/github.js"></script>
+</head>
+<body data-page="proyectos">
+
+  <div data-include="header"></div>
+
+  <main>
+    <section class="container page-head">
+      <p class="hero-prompt">jchuiz@lab:~$ <span class="accent">ls ./proyectos</span></p>
+      <h1>Proyectos</h1>
+      <p>Repositorios originales sincronizados en tiempo real desde la API pública de GitHub. Cada tarjeta muestra el lenguaje principal, una breve descripción y el acceso directo al código.</p>
+    </section>
+
+    <section class="container section" style="padding-top:0">
+      <div class="section-head">
+        <div class="section-label">github / JCHUIZ10</div>
+        <span class="tag" id="repo-count">cargando…</span>
+      </div>
+
+      <div class="toolbar" id="repo-filters" aria-label="Filtrar por lenguaje"></div>
+
+      <div class="grid" id="repo-grid" aria-live="polite">
+        <div class="card skeleton"><div class="bar" style="width:40%"></div><div class="bar" style="width:70%"></div><div class="bar" style="width:90%"></div></div>
+        <div class="card skeleton"><div class="bar" style="width:35%"></div><div class="bar" style="width:60%"></div><div class="bar" style="width:85%"></div></div>
+        <div class="card skeleton"><div class="bar" style="width:45%"></div><div class="bar" style="width:65%"></div><div class="bar" style="width:80%"></div></div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="footer"></div>
+
+</body>
+</html>
